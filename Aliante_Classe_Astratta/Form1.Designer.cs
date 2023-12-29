@@ -73,6 +73,7 @@
             this.AlaRadio.TabStop = true;
             this.AlaRadio.Text = "Ala";
             this.AlaRadio.UseVisualStyleBackColor = true;
+            this.AlaRadio.CheckedChanged += new System.EventHandler(this.AlaRadio_CheckedChanged);
             // 
             // CodaRadio
             // 
@@ -84,6 +85,7 @@
             this.CodaRadio.TabStop = true;
             this.CodaRadio.Text = "Coda";
             this.CodaRadio.UseVisualStyleBackColor = true;
+            this.CodaRadio.CheckedChanged += new System.EventHandler(this.CodaRadio_CheckedChanged);
             // 
             // RuotaRadio
             // 
@@ -95,11 +97,12 @@
             this.RuotaRadio.TabStop = true;
             this.RuotaRadio.Text = "Ruota";
             this.RuotaRadio.UseVisualStyleBackColor = true;
+            this.RuotaRadio.CheckedChanged += new System.EventHandler(this.RuotaRadio_CheckedChanged);
             // 
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(335, 48);
+            this.Label1.Location = new System.Drawing.Point(299, 60);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(45, 16);
             this.Label1.TabIndex = 4;
@@ -108,7 +111,7 @@
             // Label2
             // 
             this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(454, 48);
+            this.Label2.Location = new System.Drawing.Point(429, 60);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(45, 16);
             this.Label2.TabIndex = 5;
@@ -117,7 +120,7 @@
             // CercLabel
             // 
             this.CercLabel.AutoSize = true;
-            this.CercLabel.Location = new System.Drawing.Point(386, 9);
+            this.CercLabel.Location = new System.Drawing.Point(386, 24);
             this.CercLabel.Name = "CercLabel";
             this.CercLabel.Size = new System.Drawing.Size(68, 16);
             this.CercLabel.TabIndex = 6;
@@ -126,7 +129,7 @@
             // GomLabel
             // 
             this.GomLabel.AutoSize = true;
-            this.GomLabel.Location = new System.Drawing.Point(710, 9);
+            this.GomLabel.Location = new System.Drawing.Point(707, 24);
             this.GomLabel.Name = "GomLabel";
             this.GomLabel.Size = new System.Drawing.Size(55, 16);
             this.GomLabel.TabIndex = 7;
@@ -135,7 +138,7 @@
             // Label4
             // 
             this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(720, 48);
+            this.Label4.Location = new System.Drawing.Point(687, 60);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(45, 16);
             this.Label4.TabIndex = 9;
@@ -144,7 +147,7 @@
             // Label3
             // 
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(602, 48);
+            this.Label3.Location = new System.Drawing.Point(568, 60);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(45, 16);
             this.Label3.TabIndex = 8;
@@ -153,7 +156,7 @@
             // Label5
             // 
             this.Label5.AutoSize = true;
-            this.Label5.Location = new System.Drawing.Point(828, 48);
+            this.Label5.Location = new System.Drawing.Point(804, 60);
             this.Label5.Name = "Label5";
             this.Label5.Size = new System.Drawing.Size(45, 16);
             this.Label5.TabIndex = 10;
