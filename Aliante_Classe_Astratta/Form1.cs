@@ -128,9 +128,8 @@ namespace Aliante_Classe_Astratta
                 }
 
                 Fusoliera fusoliera = new Fusoliera(prop1, Prop2.Text);
-                aliante.Components[num].Aggiunta(fusoliera);
+                aliante.Aggiunta(fusoliera);
 
-                num++;
                 return;
             }
 
@@ -143,18 +142,16 @@ namespace Aliante_Classe_Astratta
                 }
 
                 Ala ala = new Ala(prop1, prop2);
-                aliante.Components[num].Aggiunta(ala);
+                aliante.Aggiunta(ala);
 
-                num++;
                 return;
             }
 
             if (CodaRadio.Checked)
             {
                 Coda coda = new Coda(prop1);
-                aliante.Components[num].Aggiunta(coda);
+                aliante.Aggiunta(coda);
 
-                num++;
                 return;
             }
 
@@ -189,9 +186,19 @@ namespace Aliante_Classe_Astratta
 
                 Ruota ruota = new Ruota(cerchione, gomma);
 
-                aliante.Components[num].Aggiunta(ruota);
-                num++;
+                aliante.Aggiunta(ruota);
             }
+        }
+
+        private void RimBut_Click(object sender, EventArgs e)
+        {
+            if (!int.TryParse(RimIndex.Text, out int index) || index < 0 || RimIndex.Text == "0" || String.IsNullOrEmpty(RimIndex.Text))
+            {
+                MessageBox.Show("Inserire un indice valido.");
+                return;
+            }
+
+            aliante.Rimuovi(index);
         }
     }
 }

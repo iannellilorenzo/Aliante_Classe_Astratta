@@ -53,9 +53,9 @@ namespace Aliante_Classe_Astratta
 
         }
 
-        public override bool Rimuovi(Component component)
+        public override void Rimuovi(int index)
         {
-            return false;
+            
         }
 
         public override Component GetChild(int index)

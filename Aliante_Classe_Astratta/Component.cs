@@ -10,7 +10,7 @@ namespace Aliante_Classe_Astratta
     {
         public abstract void Aggiunta(Component componente);
 
-        public abstract bool Rimuovi(Component componente);
+        public abstract void Rimuovi(int index);
 
         public abstract Component GetChild(int index);
 

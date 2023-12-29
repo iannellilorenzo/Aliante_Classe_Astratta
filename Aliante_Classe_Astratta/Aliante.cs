@@ -60,9 +60,9 @@ namespace Aliante_Classe_Astratta
             Components.Add(component);
         }
 
-        public override bool Rimuovi(Component component)
+        public override void Rimuovi(int index)
         {
-            return Components.Remove(component);
+            Components.RemoveAt(index);
         }
 
         public override Component GetChild(int index)
