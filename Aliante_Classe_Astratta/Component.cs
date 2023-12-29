@@ -8,6 +8,16 @@ namespace Aliante_Classe_Astratta
 {
     public abstract class Component
     {
+        public abstract void Aggiunta(Component componente);
 
+        public abstract bool Rimuovi(Component componente);
+
+        public abstract Component GetChild(int index);
+
+        public new abstract bool Equals(object obj);
+
+        public new abstract string ToString();
+
+        public abstract double Prezzo();
     }
 }
