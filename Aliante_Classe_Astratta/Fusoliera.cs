@@ -9,7 +9,7 @@ namespace Aliante_Classe_Astratta
     public class Fusoliera : Component
     {
         private double _lung;
-        private string _material;
+        private string _materiale;
 
         public double Lung
         {
@@ -23,28 +23,28 @@ namespace Aliante_Classe_Astratta
             }
         }
 
-        public string Material
+        public string Materiale
         {
-            get { return _material; }
-            set { _material = value; }
+            get { return _materiale; }
+            set { _materiale = value; }
         }
 
         public Fusoliera()
         {
             Lung = 0F;
-            Material = string.Empty;
+            Materiale = string.Empty;
         }
 
-        public Fusoliera(double _lung, string material)
+        public Fusoliera(double _lung, string materiale)
         {
             Lung = _lung;
-            Material = material;
+            Materiale = materiale;
         }
 
         public Fusoliera(Fusoliera oldFusoliera)
         {
             Lung = oldFusoliera.Lung;
-            Material = oldFusoliera.Material;
+            Materiale = oldFusoliera.Materiale;
         }
 
         public override bool Equals(object obj)
@@ -55,7 +55,7 @@ namespace Aliante_Classe_Astratta
             }
 
             Fusoliera other = (Fusoliera)obj;
-            return Lung == other.Lung && Material == other.Material;
+            return Lung == other.Lung && Materiale == other.Materiale;
         }
 
         public override void Aggiunta(Component component)
@@ -75,7 +75,7 @@ namespace Aliante_Classe_Astratta
 
         public override string ToString()
         {
-            return $"Fusoliera _lung: {Lung}; Fusoliera material: {Material}";
+            return $"Fusoliera _lung: {Lung}; Fusoliera material: {Materiale}";
         }
 
         public override double Prezzo()
