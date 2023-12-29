@@ -29,10 +29,10 @@ namespace Aliante_Classe_Astratta
             Cerchione = new Cerchione();
         }
 
-        public Ruota(Gomma gomma, Cerchione cerchione)
+        public Ruota(Cerchione cerchione, Gomma gomma)
         {
-            Gomma = gomma;
             Cerchione = cerchione;
+            Gomma = gomma;
         }
 
         public Ruota(Ruota oldRuota)

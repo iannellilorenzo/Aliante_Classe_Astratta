@@ -42,10 +42,10 @@ namespace Aliante_Classe_Astratta
             Aper = 0F;
         }
 
-        public Ala(double length, double wingspan)
+        public Ala(double lung, double aper)
         {
-            Lung = length;
-            Aper = wingspan;
+            Lung = lung;
+            Aper = aper;
         }
 
         public Ala(Ala oldWing)

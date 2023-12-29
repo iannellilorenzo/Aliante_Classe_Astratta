@@ -49,6 +49,7 @@
             this.Prop5 = new System.Windows.Forms.TextBox();
             this.Prop4 = new System.Windows.Forms.TextBox();
             this.RimIndex = new System.Windows.Forms.TextBox();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // FusoRadio
@@ -170,6 +171,7 @@
             this.AggBut.TabIndex = 11;
             this.AggBut.Text = "Aggiungi componente";
             this.AggBut.UseVisualStyleBackColor = true;
+            this.AggBut.Click += new System.EventHandler(this.AggBut_Click);
             // 
             // RimBut
             // 
@@ -240,11 +242,21 @@
             this.RimIndex.Size = new System.Drawing.Size(100, 22);
             this.RimIndex.TabIndex = 20;
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(962, 12);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(839, 724);
+            this.listView1.TabIndex = 21;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1813, 748);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.RimIndex);
             this.Controls.Add(this.Prop5);
             this.Controls.Add(this.Prop4);
@@ -297,6 +309,7 @@
         private System.Windows.Forms.TextBox Prop5;
         private System.Windows.Forms.TextBox Prop4;
         private System.Windows.Forms.TextBox RimIndex;
+        private System.Windows.Forms.ListView listView1;
     }
 }
 
