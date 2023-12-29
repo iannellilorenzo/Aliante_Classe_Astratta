@@ -15,13 +15,25 @@ namespace Aliante_Classe_Astratta
         public double Lung
         {
             get { return _lung; }
-            set { _lung = value; }
+            set
+            {
+                if (value >= 15F)
+                    _lung = value;
+                else
+                    _lung = 15F;
+            }
         }
 
         public double Aper
         {
             get { return _aper; }
-            set { _aper = value; }
+            set
+            {
+                if (value * 2F >= Lung)
+                    _aper = value;
+                else
+                    _aper = Lung * 2F;
+            }
         }
 
         public Ala()
