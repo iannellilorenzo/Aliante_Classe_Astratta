@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Aliante_Classe_Astratta
 {
-    public class Ruota : Component
+    public class Ruota : Composite
     {
         private Gomma _gomma;
         private Cerchione _cerchione;
@@ -52,7 +52,7 @@ namespace Aliante_Classe_Astratta
             return Gomma == other.Gomma && Cerchione == other.Cerchione;
         }
 
-        public override void Aggiunta(Component component)
+        public override void Aggiunta(Composite component)
         {
 
         }
@@ -62,7 +62,7 @@ namespace Aliante_Classe_Astratta
             
         }
 
-        public override Component GetChild(int index)
+        public override Composite GetChild(int index)
         {
             return null;
         }

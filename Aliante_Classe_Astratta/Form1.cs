@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
+using System.CompositeModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -18,7 +18,7 @@ namespace Aliante_Classe_Astratta
 
         public Form1()
         {
-            InitializeComponent();
+            InitializeComposite();
             aliante = new Aliante();
             num = 0;
         }
@@ -239,7 +239,7 @@ namespace Aliante_Classe_Astratta
 
         private void RimBut_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(RimIndex.Text, out int index) || index < 0 || RimIndex.Text == "0" || String.IsNullOrEmpty(RimIndex.Text) || index - 1 > aliante.Components.Count)
+            if (!int.TryParse(RimIndex.Text, out int index) || index < 0 || RimIndex.Text == "0" || String.IsNullOrEmpty(RimIndex.Text) || index - 1 > aliante.Composites.Count)
             {
                 MessageBox.Show("Inserire un indice valido.");
                 return;
@@ -251,7 +251,7 @@ namespace Aliante_Classe_Astratta
         private void StampaBut_Click(object sender, EventArgs e)
         {
             Display.Clear();
-            if (aliante.Components.Count < 1)
+            if (aliante.Composites.Count < 1)
             {
                 MessageBox.Show("Inserisci almeno un elemento per poterne cancellare.");
                 return;
@@ -261,7 +261,7 @@ namespace Aliante_Classe_Astratta
 
         private void PrezzoBut_Click(object sender, EventArgs e)
         {
-            if (aliante.Components.Count < 1)
+            if (aliante.Composites.Count < 1)
             {
                 MessageBox.Show("Inserire almeno un elemento per poter ottenere i costi.");
                 return;

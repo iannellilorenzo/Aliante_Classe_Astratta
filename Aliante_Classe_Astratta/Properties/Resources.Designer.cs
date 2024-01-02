@@ -37,7 +37,7 @@ namespace Aliante_Classe_Astratta.Properties
         /// <summary>
         ///   Restituisce l'istanza di ResourceManager memorizzata nella cache e usata da questa classe.
         /// </summary>
-        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        [global::System.CompositeModel.EditorBrowsableAttribute(global::System.CompositeModel.EditorBrowsableState.Advanced)]
         internal static global::System.Resources.ResourceManager ResourceManager
         {
             get
@@ -55,7 +55,7 @@ namespace Aliante_Classe_Astratta.Properties
         ///   Esegue l'override della proprietà CurrentUICulture del thread corrente per tutte
         ///   le ricerche di risorse che utilizzano questa classe di risorse fortemente tipizzata.
         /// </summary>
-        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        [global::System.CompositeModel.EditorBrowsableAttribute(global::System.CompositeModel.EditorBrowsableState.Advanced)]
         internal static global::System.Globalization.CultureInfo Culture
         {
             get

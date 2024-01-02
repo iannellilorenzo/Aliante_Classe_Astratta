@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Aliante_Classe_Astratta
 {
-    public class Aliante : Component
+    public class Aliante : Composite
     {
-        private List<Component> _components;
+        private List<Composite> _components;
 
-        public List<Component> Components
+        public List<Composite> Composites
         {
             get { return _components; }
             set { _components = value; }
@@ -18,17 +18,17 @@ namespace Aliante_Classe_Astratta
 
         public Aliante()
         {
-            Components = new List<Component>();
+            Composites = new List<Composite>();
         }
 
-        public Aliante(List<Component> components)
+        public Aliante(List<Composite> components)
         {
-            Components = components;
+            Composites = components;
         }
 
         public Aliante(Aliante oldAliante)
         {
-            Components = oldAliante.Components;
+            Composites = oldAliante.Composites;
         }
 
         public override bool Equals(object obj)
@@ -39,14 +39,14 @@ namespace Aliante_Classe_Astratta
             }
 
             Aliante other = (Aliante)obj;
-            if (Components.Count != other.Components.Count)
+            if (Composites.Count != other.Composites.Count)
             {
                 return false;
             }
 
-            for (int i = 0; i < Components.Count; i++)
+            for (int i = 0; i < Composites.Count; i++)
             {
-                if (!Components[i].Equals(other.Components[i]))
+                if (!Composites[i].Equals(other.Composites[i]))
                 {
                     return false;
                 }
@@ -55,21 +55,21 @@ namespace Aliante_Classe_Astratta
             return true;
         }
 
-        public override void Aggiunta(Component component)
+        public override void Aggiunta(Composite component)
         {
-            Components.Add(component);
+            Composites.Add(component);
         }
 
         public override void Rimuovi(int index)
         {
-            Components.RemoveAt(index);
+            Composites.RemoveAt(index);
         }
 
-        public override Component GetChild(int index)
+        public override Composite GetChild(int index)
         {
-            if (Components.Count > index)
+            if (Composites.Count > index)
             {
-                return Components[index];
+                return Composites[index];
             }
 
             return null;
@@ -79,7 +79,7 @@ namespace Aliante_Classe_Astratta
         {
             string str = "";
 
-            foreach (var component in Components)
+            foreach (var component in Composites)
             {
                 str += component.ToString();
             }
@@ -91,7 +91,7 @@ namespace Aliante_Classe_Astratta
         {
             double tot = 0;
 
-            foreach (var component in Components)
+            foreach (var component in Composites)
             {
                 tot += component.Prezzo();
             }

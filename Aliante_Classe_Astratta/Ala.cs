@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Aliante_Classe_Astratta
 {
-    public class Ala : Component
+    public class Ala : Composite
     {
         private double _lung;
         private double _aper;
@@ -65,7 +65,7 @@ namespace Aliante_Classe_Astratta
             return Lung == other.Lung && Aper == other.Aper;
         }
 
-        public override void Aggiunta(Component component)
+        public override void Aggiunta(Composite component)
         {
 
         }
@@ -75,7 +75,7 @@ namespace Aliante_Classe_Astratta
             
         }
 
-        public override Component GetChild(int index)
+        public override Composite GetChild(int index)
         {
             return null;
         }

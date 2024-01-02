@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Aliante_Classe_Astratta
 {
-    public class Gomma : Component
+    public class Gomma : Composite
     {
         private double _alt;
         private double _larg;
@@ -80,7 +80,7 @@ namespace Aliante_Classe_Astratta
             return Alt == other.Alt && Larg == other.Larg && Raggio == other.Raggio;
         }
 
-        public override void Aggiunta(Component component)
+        public override void Aggiunta(Composite component)
         {
 
         }
@@ -90,7 +90,7 @@ namespace Aliante_Classe_Astratta
             
         }
 
-        public override Component GetChild(int index)
+        public override Composite GetChild(int index)
         {
             return null;
         }

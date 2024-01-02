@@ -5,7 +5,7 @@
         /// <summary>
         /// Variabile di progettazione necessaria.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private System.CompositeModel.IContainer components = null;
 
         /// <summary>
         /// Pulire le risorse in uso.
@@ -26,7 +26,7 @@
         /// Metodo necessario per il supporto della finestra di progettazione. Non modificare
         /// il contenuto del metodo con l'editor di codice.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComposite()
         {
             this.FusoRadio = new System.Windows.Forms.RadioButton();
             this.AlaRadio = new System.Windows.Forms.RadioButton();

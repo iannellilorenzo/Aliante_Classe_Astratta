@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Aliante_Classe_Astratta
 {
-    public class Cerchione : Component
+    public class Cerchione : Composite
     {
         private double _pollici;
         private string _materiale;
@@ -58,7 +58,7 @@ namespace Aliante_Classe_Astratta
             return Pollici == other.Pollici && Materiale == other.Materiale;
         }
 
-        public override void Aggiunta(Component component)
+        public override void Aggiunta(Composite component)
         {
 
         }
@@ -68,7 +68,7 @@ namespace Aliante_Classe_Astratta
             
         }
 
-        public override Component GetChild(int index)
+        public override Composite GetChild(int index)
         {
             return null;
         }
