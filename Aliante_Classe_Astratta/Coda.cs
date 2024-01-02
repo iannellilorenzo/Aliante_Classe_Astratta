@@ -65,7 +65,7 @@ namespace Aliante_Classe_Astratta
 
         public override string ToString()
         {
-            return $"Coda length: {Lung}";
+            return $"Lunghezza coda: {Lung}";
         }
 
         public override double Prezzo()

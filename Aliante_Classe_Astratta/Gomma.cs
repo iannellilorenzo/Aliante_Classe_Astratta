@@ -97,7 +97,7 @@ namespace Aliante_Classe_Astratta
 
         public override string ToString()
         {
-            return $"Alt: {Alt}; Larg: {Larg}; Raggio: {Raggio}";
+            return $"Altezza: {Alt}; Larghezza: {Larg}; Raggio: {Raggio}";
         }
 
         public override double Prezzo()

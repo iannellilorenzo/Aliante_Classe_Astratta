@@ -75,7 +75,7 @@ namespace Aliante_Classe_Astratta
 
         public override string ToString()
         {
-            return $"Pollici: {Pollici}; Wheel rim material: {Materiale}";
+            return $"Pollici: {Pollici}; Materiale cerchioni: {Materiale}";
         }
 
         public override double Prezzo()

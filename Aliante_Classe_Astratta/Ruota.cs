@@ -69,7 +69,7 @@ namespace Aliante_Classe_Astratta
 
         public override string ToString()
         {
-            return $"Ruota tire details: {Gomma}; Ruota rim details: {Cerchione}";
+            return $"Dettagli gomma: {Gomma}; Dettagli cerchioni: {Cerchione}";
         }
 
         public override double Prezzo()

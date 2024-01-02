@@ -81,7 +81,7 @@ namespace Aliante_Classe_Astratta
 
             foreach (var component in Components)
             {
-                str += component;
+                str += component.ToString();
             }
 
             return str;

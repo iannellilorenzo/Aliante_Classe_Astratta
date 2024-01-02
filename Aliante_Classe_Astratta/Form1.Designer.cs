@@ -42,14 +42,14 @@
             this.AggBut = new System.Windows.Forms.Button();
             this.RimBut = new System.Windows.Forms.Button();
             this.RimLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.PrezzoBut = new System.Windows.Forms.Button();
             this.Prop1 = new System.Windows.Forms.TextBox();
             this.Prop2 = new System.Windows.Forms.TextBox();
             this.Prop3 = new System.Windows.Forms.TextBox();
             this.Prop5 = new System.Windows.Forms.TextBox();
             this.Prop4 = new System.Windows.Forms.TextBox();
             this.RimIndex = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.Display = new System.Windows.Forms.ListView();
             this.StampaBut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -193,14 +193,15 @@
             this.RimLabel.TabIndex = 13;
             this.RimLabel.Text = "Indice rimozione";
             // 
-            // button1
+            // PrezzoBut
             // 
-            this.button1.Location = new System.Drawing.Point(432, 266);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 94);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Calcolo prezzo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.PrezzoBut.Location = new System.Drawing.Point(432, 266);
+            this.PrezzoBut.Name = "PrezzoBut";
+            this.PrezzoBut.Size = new System.Drawing.Size(140, 94);
+            this.PrezzoBut.TabIndex = 14;
+            this.PrezzoBut.Text = "Calcolo prezzo";
+            this.PrezzoBut.UseVisualStyleBackColor = true;
+            this.PrezzoBut.Click += new System.EventHandler(this.PrezzoBut_Click);
             // 
             // Prop1
             // 
@@ -244,14 +245,15 @@
             this.RimIndex.Size = new System.Drawing.Size(100, 22);
             this.RimIndex.TabIndex = 20;
             // 
-            // listView1
+            // Display
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(962, 12);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(839, 724);
-            this.listView1.TabIndex = 21;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.Display.HideSelection = false;
+            this.Display.Location = new System.Drawing.Point(962, 12);
+            this.Display.Name = "Display";
+            this.Display.Size = new System.Drawing.Size(758, 724);
+            this.Display.TabIndex = 21;
+            this.Display.UseCompatibleStateImageBehavior = false;
+            this.Display.View = System.Windows.Forms.View.List;
             // 
             // StampaBut
             // 
@@ -261,21 +263,23 @@
             this.StampaBut.TabIndex = 22;
             this.StampaBut.Text = "Stampa componenti";
             this.StampaBut.UseVisualStyleBackColor = true;
+            this.StampaBut.Click += new System.EventHandler(this.StampaBut_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1813, 748);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1745, 744);
             this.Controls.Add(this.StampaBut);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.Display);
             this.Controls.Add(this.RimIndex);
             this.Controls.Add(this.Prop5);
             this.Controls.Add(this.Prop4);
             this.Controls.Add(this.Prop3);
             this.Controls.Add(this.Prop2);
             this.Controls.Add(this.Prop1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.PrezzoBut);
             this.Controls.Add(this.RimLabel);
             this.Controls.Add(this.RimBut);
             this.Controls.Add(this.AggBut);
@@ -314,14 +318,14 @@
         private System.Windows.Forms.Button AggBut;
         private System.Windows.Forms.Button RimBut;
         private System.Windows.Forms.Label RimLabel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button PrezzoBut;
         private System.Windows.Forms.TextBox Prop1;
         private System.Windows.Forms.TextBox Prop2;
         private System.Windows.Forms.TextBox Prop3;
         private System.Windows.Forms.TextBox Prop5;
         private System.Windows.Forms.TextBox Prop4;
         private System.Windows.Forms.TextBox RimIndex;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView Display;
         private System.Windows.Forms.Button StampaBut;
     }
 }

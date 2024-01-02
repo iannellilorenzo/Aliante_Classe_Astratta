@@ -127,6 +127,12 @@ namespace Aliante_Classe_Astratta
                     return;
                 }
 
+                if (prop1 < 75F)
+                {
+                    MessageBox.Show("La lunghezza minima possibile è 75.");
+                    return;
+                }
+
                 Fusoliera fusoliera = new Fusoliera(prop1, Prop2.Text);
                 aliante.Aggiunta(fusoliera);
 
@@ -135,10 +141,21 @@ namespace Aliante_Classe_Astratta
 
             if (AlaRadio.Checked)
             {
+                if (prop1 < 15F)
+                {
+                    MessageBox.Show("La lunghezza minima possibile è 15.");
+                    return;
+                }
+
                 if (!double.TryParse(Prop2.Text, out double prop2) || prop2 < 0 || Prop2.Text == "0" || String.IsNullOrEmpty(Prop2.Text))
                 {
                     MessageBox.Show("Inserire un valore valido.");
                     return;
+                }
+
+                if (prop2 * 2F < prop1)
+                {
+                    MessageBox.Show("L'apertura minima possibile equivale alla lunghezza moltiplicata per due.");
                 }
 
                 Ala ala = new Ala(prop1, prop2);
@@ -149,6 +166,12 @@ namespace Aliante_Classe_Astratta
 
             if (CodaRadio.Checked)
             {
+                if (prop1 < 7F || prop1 > 12F)
+                {
+                    MessageBox.Show("La lunghezza deve essere compresa tra 7 e 12.");
+                    return;
+                }
+
                 Coda coda = new Coda(prop1);
                 aliante.Aggiunta(coda);
 
@@ -157,6 +180,12 @@ namespace Aliante_Classe_Astratta
 
             if (RuotaRadio.Checked)
             {
+                if (prop1 < 15F || prop1 > 20F)
+                {
+                    MessageBox.Show("La lunghezza in pollici deve essere compresa tra 15 e 20.");
+                    return;
+                }
+
                 if (String.IsNullOrEmpty(Prop2.Text))
                 {
                     MessageBox.Show("Inserire un materiale valido.");
@@ -169,15 +198,33 @@ namespace Aliante_Classe_Astratta
                     return;
                 }
 
+                if (prop3 < 200F || prop3 > 400F)
+                {
+                    MessageBox.Show("L'altezza deve essere compresa tra 200 e 400.");
+                    return;
+                }
+
                 if (!double.TryParse(Prop4.Text, out double prop4) || prop4 < 0 || Prop4.Text == "0" || String.IsNullOrEmpty(Prop4.Text))
                 {
                     MessageBox.Show("Inserire una larghezza valida.");
                     return;
                 }
 
+                if (prop4 < 200F || prop4 > 400F)
+                {
+                    MessageBox.Show("La larghezza deve essere compresa tra 300 e 400.");
+                    return;
+                }
+
                 if (!double.TryParse(Prop5.Text, out double prop5) || prop5 < 0 || Prop5.Text == "0" || String.IsNullOrEmpty(Prop5.Text))
                 {
                     MessageBox.Show("Inserire un raggio valido.");
+                    return;
+                }
+
+                if (prop5 < 40F || prop5 > 60F)
+                {
+                    MessageBox.Show("Il raggio deve essere compreso tra 40 e 60.");
                     return;
                 }
 
@@ -192,13 +239,35 @@ namespace Aliante_Classe_Astratta
 
         private void RimBut_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(RimIndex.Text, out int index) || index < 0 || RimIndex.Text == "0" || String.IsNullOrEmpty(RimIndex.Text))
+            if (!int.TryParse(RimIndex.Text, out int index) || index < 0 || RimIndex.Text == "0" || String.IsNullOrEmpty(RimIndex.Text) || index - 1 > aliante.Components.Count)
             {
                 MessageBox.Show("Inserire un indice valido.");
                 return;
             }
 
-            aliante.Rimuovi(index);
+            aliante.Rimuovi(index - 1);
+        }
+
+        private void StampaBut_Click(object sender, EventArgs e)
+        {
+            Display.Clear();
+            if (aliante.Components.Count < 1)
+            {
+                MessageBox.Show("Inserisci almeno un elemento per poterne cancellare.");
+                return;
+            }
+            Display.Items.Add(aliante.ToString());
+        }
+
+        private void PrezzoBut_Click(object sender, EventArgs e)
+        {
+            if (aliante.Components.Count < 1)
+            {
+                MessageBox.Show("Inserire almeno un elemento per poter ottenere i costi.");
+                return;
+            }
+
+            Display.Items.Add($"Il prezzo dei componenti sommato è: {aliante.Prezzo()}");
         }
     }
 }

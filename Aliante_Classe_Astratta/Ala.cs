@@ -82,7 +82,7 @@ namespace Aliante_Classe_Astratta
 
         public override string ToString()
         {
-            return $"Ala length: {Lung}; Wingspan: {Aper}";
+            return $"Lunghezza ala: {Lung}; Apertura ala: {Aper}";
         }
 
         public override double Prezzo()

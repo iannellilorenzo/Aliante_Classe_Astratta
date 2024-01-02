@@ -75,7 +75,7 @@ namespace Aliante_Classe_Astratta
 
         public override string ToString()
         {
-            return $"Fusoliera _lung: {Lung}; Fusoliera material: {Materiale}";
+            return $"Lunghezza fusoliera: {Lung}; Materiale fusoliera: {Materiale}";
         }
 
         public override double Prezzo()
